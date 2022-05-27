@@ -10,12 +10,20 @@ import {
   AddJob,
   SharedLayout,
 } from './pages/dashboard'
+import { ProtectedRoute } from './pages'
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<SharedLayout />}>
+        <Route
+          path='/'
+          element={
+            <ProtectedRoute>
+              <SharedLayout />
+            </ProtectedRoute>
+          }   
+        >
           <Route index element={<Stats />} />
           <Route path='all-jobs' element={<AllJobs />} />
           <Route path='add-job' element={<AddJob />} />
