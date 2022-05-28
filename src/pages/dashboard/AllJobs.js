@@ -5,7 +5,7 @@ const AllJobs = () => {
   return (
     <React.Fragment>
       <SearchContainer />
-      <JobsContainer />d
+      <JobsContainer />
     </React.Fragment>
   )
 }
